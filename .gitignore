@@ -1,0 +1,4 @@
+node_modules/
+.DS_Storenode setup.js
+Thumbs.db
+*.log

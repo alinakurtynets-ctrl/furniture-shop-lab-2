@@ -1,0 +1,18 @@
+{
+  "name": "furnishop-lab2",
+  "version": "1.0.0",
+  "description": "FurniShop - Системи Зберігання (Лабораторна робота №2)",
+  "type": "module",
+  "main": "scripts/build-cards.js",
+  "scripts": {
+    "scss:build": "sass src/scss/main.scss css/style.css --no-source-map --style=compressed",
+    "scss:watch": "sass --watch src/scss/main.scss:css/style.css",
+    "build:cards": "node scripts/build-cards.js",
+    "build": "npm run build:cards && npm run scss:build"
+  },
+  "author": "Студент",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.77.0"
+  }
+}

@@ -1,0 +1,41 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+.header {
+  background-color: v.$color-bg-main;
+  border-bottom: 1px solid #e9ecef;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 1.25rem;
+  }
+}
+
+.logo {
+  font-family: v.$font-heading;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: v.$color-text-main;
+}
+
+.nav {
+  &__list {
+    display: none;
+    gap: 2rem;
+
+    @media (min-width: 768px) {
+      display: flex;
+    }
+  }
+
+  &__link {
+    font-weight: 500;
+    transition: color 0.2s;
+
+    &:hover {
+      color: v.$color-accent;
+    }
+  }
+}

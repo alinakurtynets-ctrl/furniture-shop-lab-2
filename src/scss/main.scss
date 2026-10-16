@@ -1,0 +1,344 @@
+@use "variables" as v;
+@use "mixins" as m;
+@use "header";
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: v.$font-body;
+  color: v.$color-text-main;
+  background-color: v.$color-bg-main;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+ul { list-style: none; }
+a { text-decoration: none; color: inherit; }
+
+.container {
+  max-width: v.$container-width;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+
+h1, .hero__title {
+  font-family: v.$font-heading;
+  font-size: clamp(2rem, 1.2rem + 3.5vw, 3.5rem);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-family: v.$font-heading;
+  font-size: clamp(1.5rem, 1rem + 2.5vw, 2.5rem);
+  line-height: 1.3;
+}
+
+h3 {
+  font-size: clamp(1.125rem, 0.9rem + 1vw, 1.5rem);
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: v.$radius-sm;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  &--primary {
+    background-color: v.$color-accent;
+    color: #ffffff;
+
+    &:hover {
+      background-color: v.$color-accent-hover;
+    }
+  }
+
+  &--secondary {
+    background-color: transparent;
+    border: 1px solid v.$color-accent;
+    color: v.$color-accent;
+
+    &:hover {
+      background-color: v.$color-accent;
+      color: #ffffff;
+    }
+  }
+}
+
+/* Hero Section */
+.hero {
+  padding-block: 3rem;
+  background-color: v.$color-bg-secondary;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__content, &__media {
+    width: 100%;
+
+    @media (min-width: 768px) {
+      flex: 1 1 0;
+    }
+  }
+
+  &__text {
+    color: v.$color-text-muted;
+    margin-bottom: 1.5rem;
+    font-size: 1.125rem;
+  }
+
+  &__media {
+    border-radius: v.$radius-md;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+    img {
+      width: 100%;
+      height: 350px;
+
+      @media (min-width: 768px) {
+        height: 420px;
+      }
+    }
+  }
+}
+
+/* Статистика */
+.stats {
+  padding-block: 2rem;
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 1.5rem;
+    padding: 2rem;
+    background-color: v.$color-accent;
+    color: #ffffff;
+    border-radius: v.$radius-md;
+  }
+}
+
+.stat-card {
+  text-align: center;
+
+  &__number {
+    font-size: 2.25rem;
+    font-weight: 700;
+    display: block;
+  }
+
+  &__label {
+    font-size: 0.875rem;
+    opacity: 0.9;
+  }
+}
+
+/* Секція Про нас */
+.about {
+  padding-block: 4rem;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    align-items: center;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+    }
+  }
+
+  &__media, &__content {
+    width: 100%;
+
+    @media (min-width: 768px) {
+      flex: 1 1 0;
+    }
+  }
+
+  &__media {
+    border-radius: v.$radius-md;
+    overflow: hidden;
+  }
+
+  &__content p {
+    margin-block: 1rem;
+    color: v.$color-text-muted;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+
+    li {
+      padding-left: 1.5rem;
+      position: relative;
+
+      &::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: v.$color-accent;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+/* Каталог та картки */
+.catalog {
+  padding-block: 4rem;
+  background-color: v.$color-bg-secondary;
+
+  &__title, &__subtitle {
+    text-align: center;
+  }
+
+  &__subtitle {
+    color: v.$color-text-muted;
+    margin-bottom: 2.5rem;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #ffffff;
+  border: 1px solid #e9ecef;
+  border-radius: v.$radius-md;
+  padding: 1.25rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+  }
+
+  &__image {
+    border-radius: v.$radius-sm;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    height: 220px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__title {
+    margin-bottom: 0.5rem;
+  }
+
+  &__price {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: v.$color-accent;
+    margin-bottom: 1.25rem;
+  }
+}
+
+/* Підвал */
+.footer {
+  background-color: v.$color-footer-bg;
+  color: v.$color-footer-text;
+  padding-block: 4rem 1.5rem;
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+
+    @media (min-width: 768px) {
+      grid-template-columns: 2fr repeat(3, 1fr);
+    }
+  }
+
+  &__col {
+    h3 {
+      color: #ffffff;
+      margin-bottom: 1.25rem;
+    }
+
+    p {
+      color: #a0a0a0;
+      font-size: 0.9375rem;
+    }
+
+    ul li {
+      margin-bottom: 0.625rem;
+    }
+
+    a {
+      color: #a0a0a0;
+      transition: color 0.2s;
+
+      &:hover {
+        color: #ffffff;
+      }
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1.5rem;
+    font-size: 0.875rem;
+    color: #a0a0a0;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    gap: 1.25rem;
+
+    a:hover {
+      color: #ffffff;
+    }
+  }
+}

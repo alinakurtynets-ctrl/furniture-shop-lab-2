@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Системи Зберігання — FurniShop</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Шапка сайту -->
+  <header class="header">
+    <div class="container header__container">
+      <a href="#" class="logo">FurniShop</a>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li><a href="#hero" class="nav__link">Головна</a></li>
+          <li><a href="#about" class="nav__link">Про нас</a></li>
+          <li><a href="#catalog" class="nav__link">Каталог</a></li>
+          <li><a href="#footer" class="nav__link">Контакти</a></li>
+        </ul>
+      </nav>
+      <button class="btn btn--primary" type="button">Замовити</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Головний екран -->
+    <section id="hero" class="hero">
+      <div class="container hero__container">
+        <div class="hero__content">
+          <h1 class="hero__title">Створіть ідеальний порядок у домі</h1>
+          <p class="hero__text">Сучасні та ергономічні системи зберігання для вашого гардероба, вітальні та робочого простору.</p>
+          <a href="#catalog" class="btn btn--primary">Обрати рішення</a>
+        </div>
+        <div class="hero__media">
+          <img src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=800&q=80" alt="Сучасний стильний гардероб із системами зберігання" width="600" height="420">
+        </div>
+      </div>
+    </section>
+
+    <!-- Переваги -->
+    <section class="stats">
+      <div class="container">
+        <div class="stats__container">
+          <article class="stat-card">
+            <span class="stat-card__number">7+</span>
+            <span class="stat-card__label">Років досвіду</span>
+          </article>
+          <article class="stat-card">
+            <span class="stat-card__number">2</span>
+            <span class="stat-card__label">Шоуруми в Україні</span>
+          </article>
+          <article class="stat-card">
+            <span class="stat-card__number">10k+</span>
+            <span class="stat-card__label">Шаф продано</span>
+          </article>
+          <article class="stat-card">
+            <span class="stat-card__number">260+</span>
+            <span class="stat-card__label">Варіантів модулів</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Про нас -->
+    <section id="about" class="about">
+      <div class="container about__container">
+        <div class="about__media">
+          <img src="https://images.unsplash.com/photo-1558882224-dda166733046?auto=format&fit=crop&w=800&q=80" alt="Організація речей у закритих та відкритих стелажах" loading="lazy" width="600" height="400">
+        </div>
+        <div class="about__content">
+          <h2>Ми робимо ваш простір більш функціональним</h2>
+          <p>Наші системи зберігання покликані раціонально використати кожен квадратний сантиметр вашої оселі.</p>
+          <ul class="about__list">
+            <li><strong>Оцінка та замір простору:</strong> Допомагаємо підібрати деталі за індивідуальними розмірами.</li>
+            <li><strong>Модульні рішення:</strong> Можливість трансформувати та доповнювати полиці з часом.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Каталог -->
+    <section id="catalog" class="catalog">
+      <div class="container">
+        <h2 class="catalog__title">Системи зберігання</h2>
+        <p class="catalog__subtitle">Продукція найвищої якості для вашого комфорту</p>
+
+        <div class="catalog__grid">
+<!-- cards:start -->
+<!-- Картка 1 -->
+          <article class="product-card">
+            <div class="product-card__image">
+              <img src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=600&q=80" alt="Гардеробна система "Modula"" loading="lazy">
+            </div>
+            <h3 class="product-card__title">Гардеробна система "Modula"</h3>
+            <span class="product-card__price">14 500 ₴</span>
+            <button class="btn btn--secondary product-card__btn" type="button">Додати в кошик</button>
+          </article>
+
+<!-- Картка 2 -->
+          <article class="product-card">
+            <div class="product-card__image">
+              <img src="https://images.unsplash.com/photo-1558882224-dda166733046?auto=format&fit=crop&w=600&q=80" alt="Стелаж металевий "Loft Storage"" loading="lazy">
+            </div>
+            <h3 class="product-card__title">Стелаж металевий "Loft Storage"</h3>
+            <span class="product-card__price">6 800 ₴</span>
+            <button class="btn btn--secondary product-card__btn" type="button">Додати в кошик</button>
+          </article>
+
+<!-- Картка 3 -->
+          <article class="product-card">
+            <div class="product-card__image">
+              <img src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=600&q=80" alt="Комод-органайзер "Nordic"" loading="lazy">
+            </div>
+            <h3 class="product-card__title">Комод-органайзер "Nordic"</h3>
+            <span class="product-card__price">9 200 ₴</span>
+            <button class="btn btn--secondary product-card__btn" type="button">Додати в кошик</button>
+          </article>
+
+<!-- Картка 4 -->
+          <article class="product-card">
+            <div class="product-card__image">
+              <img src="https://images.unsplash.com/photo-1558882224-dda166733046?auto=format&fit=crop&w=600&q=80" alt="Обувниця "Slim Concept"" loading="lazy">
+            </div>
+            <h3 class="product-card__title">Обувниця "Slim Concept"</h3>
+            <span class="product-card__price">4 300 ₴</span>
+            <button class="btn btn--secondary product-card__btn" type="button">Додати в кошик</button>
+          </article>
+
+<!-- Картка 5 -->
+          <article class="product-card">
+            <div class="product-card__image">
+              <img src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=600&q=80" alt="Набір органайзерів "Boxes Set"" loading="lazy">
+            </div>
+            <h3 class="product-card__title">Набір органайзерів "Boxes Set"</h3>
+            <span class="product-card__price">1 250 ₴</span>
+            <button class="btn btn--secondary product-card__btn" type="button">Додати в кошик</button>
+          </article>
+
+<!-- Картка 6 -->
+          <article class="product-card">
+            <div class="product-card__image">
+              <img src="https://images.unsplash.com/photo-1558882224-dda166733046?auto=format&fit=crop&w=600&q=80" alt="Шафа настінна "Wall Modern"" loading="lazy">
+            </div>
+            <h3 class="product-card__title">Шафа настінна "Wall Modern"</h3>
+            <span class="product-card__price">3 100 ₴</span>
+            <button class="btn btn--secondary product-card__btn" type="button">Додати в кошик</button>
+          </article>
+          <!-- cards:end -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Підвал сайту -->
+  <footer id="footer" class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__col">
+          <h3>FurniShop</h3>
+          <p>Сучасні індивідуальні рішення для ефективного та естетичного зберігання речей у домі.</p>
+        </div>
+        <nav class="footer__col">
+          <h3>Продукція</h3>
+          <ul>
+            <li><a href="#">Гардеробні</a></li>
+            <li><a href="#">Стелажі</a></li>
+            <li><a href="#">Комоди</a></li>
+          </ul>
+        </nav>
+        <nav class="footer__col">
+          <h3>Компанія</h3>
+          <ul>
+            <li><a href="#">Про нас</a></li>
+            <li><a href="#">Портфоліо</a></li>
+            <li><a href="#">Контакти</a></li>
+          </ul>
+        </nav>
+        <nav class="footer__col">
+          <h3>Клієнтам</h3>
+          <ul>
+            <li><a href="#">Доставка і оплата</a></li>
+            <li><a href="#">Гарантія</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="footer__bottom">
+        <p>&copy; 2026 FurniShop. Всі права захищені.</p>
+        <div class="footer__socials">
+          <a href="#" aria-label="Facebook">Facebook</a>
+          <a href="#" aria-label="Instagram">Instagram</a>
+          <a href="#" aria-label="Pinterest">Pinterest</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
