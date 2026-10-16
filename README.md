@@ -23,4 +23,4 @@
 - `index.html` — головна сторінка з маркерами `<!-- cards:start -->` та `<!-- cards:end -->`.
 
 ## 5. Публікація
-Посилання на опубліковану сторінку: `https://<ваш-логін>.github.io/<назва-репозиторію>/`
+Посилання на опубліковану сторінку:  https://alinakurtynets-ctrl.github.io/furniture-shop-lab-2/
